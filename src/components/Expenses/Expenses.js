@@ -1,11 +1,20 @@
 import ExpenseItem from "./ExpenseItem";
+import Card from "../UI/Card"
 import "./Expenses.css";
 
 function Expenses(props){
     console.log(props.expenses);
     return (
-            <div className="expenses">
-                <ExpenseItem
+            <Card className="expenses">
+                {props.expenses.map((item) => (
+                    <ExpenseItem
+                    // key={item.id}
+                    title={item.title}
+                    amt={item.amt}
+                    date={item.date}
+                    />
+                ))}
+                {/* <ExpenseItem
                     title={props.expenses[0].title}
                     amt={props.expenses[0].amt}
                     date={props.expenses[0].date}
@@ -19,8 +28,8 @@ function Expenses(props){
                     title={props.expenses[2].title}
                     amt={props.expenses[2].amt}
                     date={props.expenses[2].date}
-                ></ExpenseItem>
-            </div>
+                ></ExpenseItem> */}
+            </Card>
         
     );
 }
