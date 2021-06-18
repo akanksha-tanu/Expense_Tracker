@@ -8,13 +8,13 @@ function ExpenseItem(props) {
 
   // let title=props.title;
 
-  const [title,setTitle]=useState(props.title);
+  // const [title,setTitle]=useState(props.title);
 
-  const clickFunc=()=>{
-    // title="hello";
-    setTitle("Updated !");
-    console.log(title);
-  };
+  // const clickFunc=()=>{
+  //   // title="hello";
+  //   setTitle("Updated !");
+  //   console.log(title);
+  // };
 
   
   return (
@@ -23,10 +23,10 @@ function ExpenseItem(props) {
         date={props.date}
       ></ExpenseDate>
       <div className="expense-item_description">
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <div className="expense-item_price">Rs {props.amt}</div>
       </div>
-      <button onClick={clickFunc}> change title </button>
+      {/* <button onClick={clickFunc}> change title </button> */}
     </Card>
   );
 }

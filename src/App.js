@@ -1,7 +1,7 @@
 // import './App.css';
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from './components/NewExpense/NewExpense';
-import ExpensesFilter from './components/Expenses/ExpensesFilter';
+// import ExpensesFilter from './components/Expenses/ExpensesFilter';
 
 const App = () => {
   const expense = [
@@ -20,7 +20,6 @@ const App = () => {
   return (
     <div> 
       <NewExpense onSaveExpenseData={addExpenseHandler}/>
-      <ExpensesFilter/>
       <Expenses expenses={expense}/>
     </div>
   );
